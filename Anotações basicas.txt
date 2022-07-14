@@ -1,0 +1,30 @@
+*Criando um projeto com angular CLI
+ng new NOMEPROJETO
+
+*Rodar o projeto
+ng serve
+URL:  http://localhost:4200
+
+*Criar componente
+ng generate component nome-component
+
+*Chama os componentes na classe app.component.html 
+<app-topo></app-topo> //igual chama em react
+chama de acordo com o seletor 
+
+*Pega o evento
+() 
+
+*Manda uma açao
+[]
+
+@Input()
+recebe a props vinda de outro componente
+
+@Outout()
+expõe o atributo para componentes pai
+
+ngOnChanges()
+toda vez que o atributo é modificado executa o onchange
+ob: precisa usar o implementes na classe, ex: implements OnChanges
+
