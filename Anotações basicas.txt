@@ -7,6 +7,7 @@ URL:  http://localhost:4200
 
 *Criar componente
 ng generate component nome-component
+ng g c nome-component
 
 *Chama os componentes na classe app.component.html 
 <app-topo></app-topo> //igual chama em react
@@ -28,3 +29,14 @@ ngOnChanges()
 toda vez que o atributo é modificado executa o onchange
 ob: precisa usar o implementes na classe, ex: implements OnChanges
 
+Realizar um GET
+1- usar o @Injectable
+2- ex:  public getOfertas():Observable<any>{
+       return this.http.get('http://localhost:3000/ofertas?destaque=true')
+        
+    }
+3 - Para extrair os dados:   
+this.ofertasService.getOfertas()
+    .subscribe((res)=>{
+      this.ofertas = res
+    })
