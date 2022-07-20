@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-oferta',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfertaComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.snapshot.params['id'] 
+    // this.route.params.subscribe((parametro:any)=>{ //quando altera a rota, ele executa uma acao 
+    //   console.log(parametro.id)
+    // })
   }
 
 }

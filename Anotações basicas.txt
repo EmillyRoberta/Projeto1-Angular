@@ -40,3 +40,7 @@ this.ofertasService.getOfertas()
     .subscribe((res)=>{
       this.ofertas = res
     })
+	
+snapshot e subscribe
+snapshot-> recupera o id da rota
+subscribe-> //quando altera a rota, ele executa uma acao 
