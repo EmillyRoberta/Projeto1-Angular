@@ -44,3 +44,5 @@ this.ofertasService.getOfertas()
 snapshot e subscribe
 snapshot-> recupera o id da rota
 subscribe-> //quando altera a rota, ele executa uma acao 
+
+OnDestroy => usado para destruir o componente, quando saimos

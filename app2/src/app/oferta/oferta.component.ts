@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable, Observer, Subscriber, Subscription } from 'rxjs';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-oferta',
@@ -9,9 +11,9 @@ import { Oferta } from '../shared/oferta.model';
   styleUrls: ['./oferta.component.scss'],
   providers: [ OfertasService ]
 })
-export class OfertaComponent implements OnInit {
+export class OfertaComponent implements OnInit, OnDestroy {
 
-  public oferta:Array<Oferta> = []
+  public oferta:Oferta[] = []
 
 
   constructor(private route:ActivatedRoute, private ofertasService:OfertasService) { }
@@ -24,9 +26,15 @@ export class OfertaComponent implements OnInit {
     this.ofertasService.getOfertasPorId(this.route.snapshot.params['id'])
     .subscribe((res)=>{
       this.oferta = res
-
     })
+console.log(this.oferta)
+    // this.route.params.subscribe((resposta)=>{
 
+    // })
+  }
+
+  ngOnDestroy(): void {
+  
   }
 
 
