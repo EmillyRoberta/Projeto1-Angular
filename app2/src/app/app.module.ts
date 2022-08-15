@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { DiversaoComponent } from './diversao/diversao.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.route';
 import { OfertaComponent } from './oferta/oferta.component'
+import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OfertaComponent } from './oferta/oferta.component'
     RodapeComponent,
     RestaurantesComponent,
     DiversaoComponent,
-    OfertaComponent
+    OfertaComponent,
+    DescricaoReduzida
   ],
   imports: [
     BrowserModule,
